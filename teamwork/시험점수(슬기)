@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class ArrayExam01 {
+	public static void main(String[] args)
+	{	
+	 String name;
+	 int score[] = new int[4];
+	 float avg;
+	 
+	 Scanner sc = new Scanner(System.in);
+	 
+	 System.out.println("이름을 입력하세요");
+	 name = sc.next(); //이름입력
+			
+	 System.out.println("국어, 영어, 수학 점수를 입력해주세요.");
+			
+		for(int i=0;i<score.length-1;i++) { //score[3]은 총점이므로, -1.
+			score[i] = sc.nextInt(); // 성적입력
+			score[3] += score[i]; // score[0],[1],[2] 합 [3]에 대입
+		}
+		avg = (float)score[3]/3;  //총점 나누기 과목수 3 해서 평균 산출
+
+		// 입력된 값 출력
+		System.out.println(name);	
+		String []str = {"국어","영어","수학","총점"};
+		for(int i=0;i<score.length;i++) {
+			System.out.println(str[i]+" : "+score[i]);
+				
+		}
+		System.out.println("평균 : "+ avg);
+	}
+	}
