@@ -15,7 +15,7 @@ public class Array1 {
 			score[score.length - 1] += score[i];
 		}
 		;
-		avg = (float)score[3] / (score.length - 1);
+		avg = score[3] / (float)(score.length - 1);
 		System.out.print("이름: " + name + " ");
 		System.out.print("국어: " + score[0] + " ");
 		System.out.print("영어: " + score[1] + " ");
