@@ -1,15 +1,25 @@
 import java.util.Scanner;
-
 public class Final {
-
 	public static void main(String[] args) {
-
 		Scanner sc = new Scanner(System.in);
-
-		Final.graderesult(sc); // 학생수 입력 받아 성적 관리
-		Final.calculator(sc); // 사칙연산 do_while 적용
-		Final.choosestar(sc); // 사칙연산 do_while 적용
-
+		char b = 'y';
+		do {
+			System.out.println("작동시킬 프로그램 번호를 입력하세요");
+			System.out.println("( 1.성적관리 2.사칙연산(dowhile) 3.별모양 고르기 )");
+			System.out.print("번호 입력: ");
+			int a = sc.nextInt();
+			switch (a) {
+			case 1:
+				Final.graderesult(sc); break; // 학생수 입력 받아 성적 관리
+			case 2:
+				Final.calculator(sc);  break; // 사칙연산 do_while 적용
+			case 3:
+				Final.choosestar(sc);  break;// 보고싶은 별 모양 고르기
+			}
+			;
+			System.out.print("프로그램을 한번 더 이용하시겠습니까?(Y/y): ");
+			b = sc.next().charAt(0);
+		} while (b == 'Y' || b == 'y');
 	}
 
 	public static void graderesult(Scanner sc) { // 학생수 입력 받아 성적관리(총합,평균) 결과 노출 프로그램
@@ -56,7 +66,7 @@ public class Final {
 			char c = cbn.input2(sc);
 			double answer = cbn.calcul(a, b, c);
 			cbn.output(answer);
-			System.out.print("다시 하실건가요?(Y/y): ");
+			System.out.print("사칙연산을 다시 하실건가요?(Y/y): ");
 			cn = sc.next().charAt(0);
 		} while (cn == 'Y' | cn == 'y');
 	}
@@ -96,7 +106,7 @@ public class Final {
 		System.out.println("사칙연산 결과: " + answer);
 	};
 
-	public static void choosestar(Scanner sc) {
+	public static void choosestar(Scanner sc) { // 보고싶은 별 모양 고르기
 		System.out.print("보고싶은 별모양 번호를 입력하세요: ");
 		int a = sc.nextInt();
 		switch (a) {
