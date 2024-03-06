@@ -1,40 +1,40 @@
-
+import java.util.Scanner;
 public class CallByName {
-	
 	public static void main(String[] args) {
-
-		CallByName.disp2();
-
-		CallByName cbn = new CallByName();
-		cbn.disp1();
-
-		int num = 100;
-		num=cbn.disp3(num);
-		System.out.println(num); // 3
-		
-		String str = new String("Superman");
-		String c;
-		c=cbn.disp4(str);
-		System.out.println(c);
-		System.out.println(args);
-		
+		System.out.print("1번 숫자를 입력하세요: ");
+		int a = CallByName.input1();
+		System.out.print("2번 숫자를 입력하세요: ");
+		int b = CallByName.input1();
+		System.out.print("사칙연산을 입력하세요: ");
+		char c = CallByName.input2();
+		double answer=CallByName.calcul(a, b, c);
+		CallByName.output(answer);
 	}
-	
-	public void disp1() { // call by name
-		System.out.println("call by name");
+	public static int input1() { // call by name
+		Scanner sc1 = new Scanner(System.in);
+		int aa = sc1.nextInt();
+		System.out.println("숫자 " + aa +"를 입력했습니다.");
+		return aa;
 	}
-	public static void disp2() { // call by name
-		System.out.println("call by name");
+	public static char input2() { // call by name
+		Scanner sc2 = new Scanner(System.in);
+		char bb = sc2.next().charAt(0);
+		System.out.println("사칙연산 " + bb +"를 입력했습니다.");
+		return bb;
+	}	
+	public static double calcul(int a, int b, char c) { 
+		double answer=0;
+		switch(c) {
+		case '+': answer = a+b; break;
+		case '-': answer = a-b; break;
+		case '*': answer = a*b; break;
+		case '/': answer = (double)a/b; break;
+		}
+		return answer;
 	}
-	public int disp3(int num) { // call by value / 값을 복사
-		System.out.println(num); // 1
-		num++;
-		System.out.println(num); // 2
-		
-		return num;
-	}
-	public String disp4(String s) { // call by reference / 주소를 복사
-	System.out.println(s);
-	return s;
-	}
+	public static void output(double answer) {
+		System.out.println("사칙연산 결과: " + answer);
+	}	
 }
+
+	
