@@ -3,6 +3,7 @@ public class Final {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		char b = 'y';
+		Final FF =new Final();
 		do {
 			System.out.println("작동시킬 프로그램 번호를 입력하세요");
 			System.out.println("( 1.성적관리 2.사칙연산(dowhile) 3.별모양 고르기 )");
@@ -10,7 +11,7 @@ public class Final {
 			int a = sc.nextInt();
 			switch (a) {
 			case 1:
-				Final.graderesult(sc); break; // 학생수 입력 받아 성적 관리
+				FF.graderesult(sc); break; // 학생수 입력 받아 성적 관리
 			case 2:
 				Final.calculator(sc);  break; // 사칙연산 do_while 적용
 			case 3:
@@ -22,7 +23,7 @@ public class Final {
 		} while (b == 'Y' || b == 'y');
 	}
 
-	public static void graderesult(Scanner sc) { // 학생수 입력 받아 성적관리(총합,평균) 결과 노출 프로그램
+	public void graderesult(Scanner sc) { // 학생수 입력 받아 성적관리(총합,평균) 결과 노출 프로그램
 
 		System.out.print("학생수 입력: ");
 		int a = sc.nextInt();
@@ -30,6 +31,7 @@ public class Final {
 		String[] name = new String[a];
 		int[][] score = new int[a][4];
 		float[] avg = new float[a];
+		// String[] scoName = {"Name","Kor","Eng","Math","Total","Avg"};
 
 		for (int i = 0; i < name.length; i++) {
 			System.out.print("이름 입력: ");
@@ -42,6 +44,8 @@ public class Final {
 			avg[i] = score[i][score[i].length - 1] / (float) (score[i].length - 1);
 		}
 		for (int i = 0; i < name.length; i++) {
+			
+			
 			System.out.print("이름: " + name[i] + " ");
 			System.out.print("국어: " + score[i][0] + " ");
 			System.out.print("영어: " + score[i][1] + " ");
@@ -56,7 +60,7 @@ public class Final {
 	public static void calculator(Scanner sc) { // 사칙연산 dowhile 적용
 		char cn = 'Y';
 		do {
-			CallByName cbn = new CallByName();
+			Final cbn = new Final();
 			System.out.print("1번 숫자를 입력하세요: ");
 			int a = cbn.input1(sc);
 			System.out.print("2번 숫자를 입력하세요: ");
