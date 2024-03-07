@@ -10,10 +10,10 @@ public class ClassExam4 {
 
 	// Constructor ------------------------------------------------------------
 	public ClassExam4(int number1, int number2, char operation, char answer) {
-		num1 = number1;
-		num2 = number2;
-		oper = operation;
-		ans = answer;
+		this.num1 = number1;
+		this.num2 = number2;
+		this.oper = operation;
+		this.ans = answer;
 	};
 
 	// main method ------------------------------------------------------------
