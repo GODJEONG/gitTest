@@ -46,5 +46,6 @@ public class ClassExam7 {
 		System.out.println(th2.getA() + "+" + th2.getB());
 		System.out.println(th3.getA() + "+" + th3.getB());
 		System.out.println(th3.getA() + "+" + th3.getB());
+		System.out.println(th3.getA() + "+" + th3.getB());
 	}
 }
