@@ -41,7 +41,6 @@ public class ClassExam4 {
 			calculator.setnum2(sc.nextInt());
 			*/
 
-			System.out.println(calculator.getnum1() + "" + calculator.getoper() + "" + calculator.getnum2() + "=");
 			switch (calculator.getoper()) {
 			case '+':
 				calculator.result = calculator.plus(calculator.getnum1(), calculator.getnum2()); break;
