@@ -1,4 +1,3 @@
-
 public class ClassExam1 {
 	
 	private int a;
