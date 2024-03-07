@@ -1,17 +1,20 @@
 import java.util.Scanner;
 
 public class ClassExam4 {
-	private int num1; // field
-	private int num2; // field
-	private char oper; // field
 	
-	// Constructor
+	// field -------------------------------------------------------------------
+	private int num1; 
+	private int num2; 
+	private char oper; 
+	
+	// Constructor ------------------------------------------------------------
 	public ClassExam4(int number1, int number2, char operation) {
 		num1 = number1;
 		num2 = number2;
 		oper = operation;
 	};
 	
+	// main method ------------------------------------------------------------
 	public static void main(String[] args) { // method
 
 		char cn = 'Y';
@@ -32,7 +35,7 @@ public class ClassExam4 {
 
 		} while (cn == 'Y' | cn == 'y');
 	}
-// -----------------------------------------------------------------
+    // get, set method -----------------------------------------------------------------
 	
 	public void setnum1(Scanner sc) {
 		num1 = sc.nextInt();
@@ -65,7 +68,7 @@ public class ClassExam4 {
 		System.out.println("사칙연산 결과: " + calcul(num1, num2, oper) + "입니다.");
 	}
 
-
+	// 사칙연산 -----------------------------------------------------------------
 
 	public double calcul(int a, int b, char c) {
 		double answer = 0;
