@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Final {
 	public static void main(String[] args) {
+		
 		Scanner sc = new Scanner(System.in);
 		char b = 'y';
 		Final FF =new Final();
@@ -44,7 +45,7 @@ public class Final {
 			avg[i] = score[i][score[i].length - 1] / (float) (score[i].length - 1);
 		}
 		for (int i = 0; i < name.length; i++) {
-			
+	
 			
 			System.out.print("이름: " + name[i] + " ");
 			System.out.print("국어: " + score[i][0] + " ");
