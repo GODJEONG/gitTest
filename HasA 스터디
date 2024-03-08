@@ -1,0 +1,93 @@
+class AA{
+	int aa;
+
+	public int getAa() {
+		return aa;
+	}
+
+	public void setAa(int aa) {
+		this.aa = aa;
+	}
+	
+}
+
+class BB{
+	int aa;
+
+	public int getAa() {
+		return aa;
+	}
+
+	public void setAa(int aa) {
+		this.aa = aa;
+	}
+	
+}
+class CC{
+	int aa;
+
+	public int getAa() {
+		return aa;
+	}
+
+	public void setAa(int aa) {
+		this.aa = aa;
+	}
+	
+}
+
+public class HasA2 { //외부에서 만든 객체를 넣는 것_객체di
+	private AA aa;
+	private BB bb;
+	private CC cc;
+	
+	public HasA2() { //생성자
+		
+		aa = new AA(); 
+		bb = new BB();
+		cc = new CC();
+	}
+	
+	public void setAa(AA aa, BB bb, CC cc) {
+		this.aa=aa;
+		this.bb=bb;
+		this.cc=cc;
+	}
+	
+	public int getA() {
+		return aa.getAa();
+	}
+	
+	public int getB() {
+		return bb.getAa();
+	}
+	
+	public int getC() {
+		return cc.getAa();
+	}
+
+	public static void main(String[] args) {
+		 HasA2 hasa2 = new HasA2();
+		AA a = new AA();
+		BB b = new BB();
+		CC c = new CC();
+
+		a.setAa(3);
+		b.setAa(4);
+		c.setAa(5);
+		
+		hasa2.setAa(a,b,c);
+		
+		
+		System.out.println(a.getAa());
+		System.out.println(b.getAa());
+		System.out.println(c.getAa());
+		
+		System.out.println(hasa2.getA());
+		System.out.println(hasa2.getB());
+		System.out.println(hasa2.getC());
+		
+	//	System.out.println(hasa2.getAA());
+}
+}
+
