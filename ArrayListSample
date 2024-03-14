@@ -1,0 +1,30 @@
+// https://www.delftstack.com/ko/howto/java/adding-objects-to-arraylist/
+
+
+import java.util.ArrayList;
+public class ArrayObject {
+  public static void main(String args[]) {
+    ArrayList<Book> arrayOfBooks = new ArrayList<>();
+    
+    Book p = new Book("To Kill a Mockingbird", "Harper Lee", 3);
+    arrayOfBooks.add(p);
+    arrayOfBooks.add(new Book("1984", "George Orwell", 4));
+    arrayOfBooks.add(new Book("Harry Potter and the Philosopher's Stone", "J.K. Rowling", 4));
+    arrayOfBooks.add(new Book("The Lord of the Rings", "J.R.R. Tolkien", 4.5));
+
+    for (Book book : arrayOfBooks) {
+      System.out.println(
+          "BookTitle: " + book.bookName + ", by" + book.author + "with a rating of " + book.rating);
+    }
+  }
+}
+class Book {
+  String bookName;
+  String author;
+  double rating;
+  Book(String bookName, String author, double rating) {
+    this.bookName = bookName;
+    this.author = author;
+    this.rating = rating;
+  }
+}
