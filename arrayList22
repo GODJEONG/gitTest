@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+
+public class ArrayStuTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<StudentScoreHasA> stuList = new ArrayList<>(); //stuList ArrayList 생성
+		
+		for (int i=0; i<10; i++) {
+		stuList.add(new StudentScoreHasA());
+		}
+		
+		System.out.println(stuList);
+	}
+
+}
