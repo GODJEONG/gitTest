@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+
+public class ArrayStuTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<StudentScoreHasA> stuList = new ArrayList<>(); // stuList ArrayList 생성
+
+		for (int i = 0; i < 10; i++) {
+
+			StudentScoreHasA student = new StudentScoreHasA();
+
+			student.setName1("학생" + i);
+			student.setKor(90 + i);
+			student.setMat(90 + i * 2);
+			student.setEng(90 + i * 4); // 성적 자동입력 삭제
+
+			stuList.add(student); // 학생 객체를 stuList에 추가
+		}
+
+		for (int i = 0; i < stuList.size(); i++) {
+			StudentScoreHasA student = stuList.get(i);
+			System.out.println("이름: " + student.getName());
+			System.out.println("국어 점수: " + student.getKor());
+			System.out.println("수학 점수: " + student.getMat());
+			System.out.println("영어 점수: " + student.getEng());
+			System.out.println();
+
+		}
+
+	}
+}
